@@ -1333,3 +1333,6 @@ function suffusion_get_horizontal_components($include = array(), $exclude = arra
 	}
 	return $base;
 }
+
+// Enqueue Custom Overrides
+wp_enqueue_style( 'newera-custom', get_template_directory_uri() . '/custom.css' );

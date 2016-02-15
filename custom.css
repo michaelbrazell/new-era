@@ -1,0 +1,22 @@
+/* Custom CSS
+	Author: Worcester Web Group
+	Version: a1.0
+	Date: Feb, 2016
+	Author URI: http://www.worcesterwebgroup.com
+	Note: This is using liberal use of !importants because Suffusion theme is over-writing many of these via the WP Customizer
+*/
+
+/* Remove Grey Background & Borders */
+body {
+	background-color: #fff !important;
+}
+
+#wrapper {
+	border: none !important;
+}
+
+/* Fix Widget Imbalance Problem */
+.warea .suf-horizontal-widget h3.dbx-handle {
+	padding-left: 0;
+	padding-right: 0;
+}
