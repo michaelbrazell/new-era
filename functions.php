@@ -1335,4 +1335,7 @@ function suffusion_get_horizontal_components($include = array(), $exclude = arra
 }
 
 // Enqueue Custom Overrides
-wp_enqueue_style( 'newera-custom', get_template_directory_uri() . '/custom.css' );
+function new_era_high_priority_css() {
+  wp_enqueue_style('important', get_template_directory_uri() . '/custom.css');
+}
+add_action('wp_enqueue_scripts', 'new_era_high_priority_css', '999');

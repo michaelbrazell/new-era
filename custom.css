@@ -3,20 +3,107 @@
 	Version: a1.0
 	Date: Feb, 2016
 	Author URI: http://www.worcesterwebgroup.com
-	Note: This is using liberal use of !importants because Suffusion theme is over-writing many of these via the WP Customizer
 */
 
 /* Remove Grey Background & Borders */
 body {
-	background-color: #fff !important;
+	background-color: #fff;
 }
 
 #wrapper {
-	border: none !important;
+	border: none;
 }
 
 /* Fix Widget Imbalance Problem */
 .warea .suf-horizontal-widget h3.dbx-handle {
 	padding-left: 0;
 	padding-right: 0;
+}
+
+/* Fix issue with header on mobile */
+/* Tablet */
+@media (max-width: 769px) {
+	#header {
+		padding-top: 0;
+		min-height: 0;
+	}
+	
+	#left-header-widgets, #right-header-widgets, #header-widgets {
+		display: block;
+		width: 100%;
+		float: none;
+		margin: 0;
+	}
+	
+	#header-widgets {
+    	text-align: center;
+	}
+	
+	#text-3 a {
+		height: initial;
+		text-align: center;
+	}
+	
+	#right-header-widgets {
+		padding-bottom: 45px;
+	}
+	
+	#right-header-widgets form {
+		width: 80%;
+	}
+	
+	#right-header-widgets form input.searchfield {
+		width: 80%;
+	}
+	
+	#nav {
+		border-bottom: none;
+	}
+	
+	#nav ul.sf-menu {
+		display: block;
+		float: none !important;
+		width: 94%;
+		margin: 0 auto;
+		padding-top: 15px;
+		clear: both;
+	}
+	/* .l_tinynavNaN */
+	
+	#content {
+		margin-top: 0;
+	}
+	
+	.post, article.page {
+		 padding-top: 15px;
+	}
+	
+	/* Fix buttons */
+	body .btn {
+		background: none !important;
+		background-image: none !important;
+		box-shadow: none !important;
+		padding: 0 !important;
+		color: #f05a28 !important;
+	}
+	
+	body .btn:hover {
+		color: #d05e0b !important;
+	}
+	
+	body .huge_it_slide_container_2 .btn {
+		color: #fff !important;
+	}
+}
+
+/* Mobile menu introduction */
+@media (max-width: 480px) {
+	#nav ul.sf-menu {
+		display: none;
+	}
+	.tinynav {
+		width: 95%;
+		margin: 0 auto;
+		
+	}
 }
